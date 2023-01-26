@@ -44,8 +44,8 @@ def jouer():
     pygame.mixer.music.load(piste)
     pygame.mixer.music.play()
 
+    test_fin(fin_de_piste) 
     afficher_position()
-    test_fin(fin_de_piste)   
 
 #Arrete la piste
 def arreter():
@@ -130,18 +130,12 @@ def sec_en_min(num):
     return f"{min:0>2}:{sec:0>2}"
 
 
+
+#Elements de l'interface
 pistes_audio = Listbox(fenetre, font=('System',12), bg='grey20', fg='white')
-pistes_audio.pack(fill="both", expand="yes")
-
 barre_lecture = Scale(fenetre, from_=0 , to=duree_piste, variable= temps, orient=HORIZONTAL, command= maj_position, width=10, sliderlength=15, showvalue=0)
-barre_lecture.pack(fill=X)
-
 boutons = Frame(fenetre)
-boutons.pack(anchor='center')
-
 timer = Label(fenetre, text= "00:00 / 00:00")
-timer.pack()
-
 
 btn_jouer_img = PhotoImage(file='playerMusic\images\play.png').subsample(2,2)
 btn_pause_img = PhotoImage(file='playerMusic\images\pause.png').subsample(2,2)
@@ -165,6 +159,11 @@ btn_supprimer = Button(boutons, image=btn_suppr_img, command= supprimer, width=7
 barre_volume = Scale(boutons, from_=0 , to=100, command= volume, width=10, sliderlength=15, orient=HORIZONTAL)
 
 
+#Position dans l'interface
+pistes_audio.pack(fill="both", expand="yes")
+barre_lecture.pack(fill=X)
+boutons.pack(anchor='center')
+timer.pack()
 
 btn_jouer.grid(row=0, column=2)
 btn_pause.grid(row=0, column=3)
