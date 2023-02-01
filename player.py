@@ -137,14 +137,14 @@ barre_lecture = Scale(fenetre, from_=0 , to=duree_piste, variable= temps, orient
 boutons = Frame(fenetre)
 timer = Label(fenetre, text= "00:00 / 00:00")
 
-btn_jouer_img = PhotoImage(file='playerMusic\images\play.png').subsample(2,2)
-btn_pause_img = PhotoImage(file='playerMusic\images\pause.png').subsample(2,2)
-btn_stop_img = PhotoImage(file='playerMusic\images\stop.png').subsample(2,2)
-btn_boucle_img = PhotoImage(file='playerMusic\images\loop.png').subsample(2,2)
-btn_boucle_off_img = PhotoImage(file='playerMusic\images\loop_off.png').subsample(2,2)
-btn_ajout_img = PhotoImage(file='playerMusic\images\_add.png').subsample(2,2)
-btn_suppr_img = PhotoImage(file='playerMusic\images\delete.png').subsample(2,2)
-btn_aleatoire_img = PhotoImage(file='playerMusic\images\_random.png').subsample(2,2)
+btn_jouer_img = PhotoImage(file='images\play.png').subsample(2,2)
+btn_pause_img = PhotoImage(file='images\pause.png').subsample(2,2)
+btn_stop_img = PhotoImage(file='images\stop.png').subsample(2,2)
+btn_boucle_img = PhotoImage(file='images\loop.png').subsample(2,2)
+btn_boucle_off_img = PhotoImage(file='images\loop_off.png').subsample(2,2)
+btn_ajout_img = PhotoImage(file='images\_add.png').subsample(2,2)
+btn_suppr_img = PhotoImage(file='images\delete.png').subsample(2,2)
+btn_aleatoire_img = PhotoImage(file='images\_random.png').subsample(2,2)
 
 
 btn_jouer = Button(boutons, image=btn_jouer_img, width=70, command= jouer, height=60, font=('Arial',12), relief=FLAT)
